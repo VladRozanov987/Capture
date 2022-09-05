@@ -7,13 +7,17 @@ import home2 from "../img/home2.png";
 //Styled component
 import styled from "styled-components";
 import { Layout, Description, Image } from "../styles";
+import { fade } from "../animation";
+import UseSkroll from "./UseSkroll.component";
 
 const ServicesSection = () => {
+  const [element, controls] = UseSkroll();
+
   return (
-    <Services>
+    <Services variants={fade} animate={controls} initial="hidden" ref={element}>
       <Description>
         <h2>
-          Hight <span>quality</span> services
+          Hight <span className="pinkSpan">quality</span> services
         </h2>
         <Cards>
           <Card>
@@ -64,8 +68,8 @@ const Services = styled(Layout)`
 `;
 
 const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 `;
 
 const Card = styled.div`

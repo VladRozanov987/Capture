@@ -1,56 +1,59 @@
 import styled from "styled-components";
 import { Layout } from "../styles";
+import Toggle from "./Toggle.component";
+import { AnimateSharedLayout } from "framer-motion";
+import { fade } from "../animation";
+import UseSkroll from "./UseSkroll.component";
 
 const FaqSection = () => {
+  const [element, controls] = UseSkroll();
+
   return (
-    <Faq>
+    <Faq variants={fade} animate={controls} initial="hidden" ref={element}>
       <h2>
         Any questions <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How do I start?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
-            eaque!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily schedule</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
-            eaque!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Diferrent payment methods</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
-            eaque!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What products do you offer</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
-            eaque!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How do I start?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
+              eaque!
+            </p>
+          </div>
+        </Toggle>
+
+        <Toggle title="Daily schedule">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
+              eaque!
+            </p>
+          </div>
+        </Toggle>
+
+        <Toggle title="Diferrent payment methods">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
+              eaque!
+            </p>
+          </div>
+        </Toggle>
+
+        <Toggle title="What products do you offer">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
+              eaque!
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };

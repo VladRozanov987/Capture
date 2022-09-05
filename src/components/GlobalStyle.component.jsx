@@ -39,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
   }
   a{
     font-size: 1.1rem;
+    transition: all .4s;
+    &:hover {
+      color: #23d997;
+    }
   }
   span{
     font-weight: bold;
