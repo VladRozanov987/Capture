@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Layout } from "../styles";
 import Toggle from "./Toggle.component";
+//Animations
 import { AnimateSharedLayout } from "framer-motion";
 import { fade } from "../animation";
 import UseSkroll from "./UseSkroll.component";
@@ -13,6 +14,7 @@ const FaqSection = () => {
       <h2>
         Any questions <span>FAQ</span>
       </h2>
+
       <AnimateSharedLayout>
         <Toggle title="How do I start?">
           <div className="answer">

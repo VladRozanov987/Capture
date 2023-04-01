@@ -25,28 +25,31 @@ const ServicesSection = () => {
               <img src={clock} alt="" />
               <h3>Efficient</h3>
             </div>
-            <p>Blah Blah Blaaaaaah</p>
+            <p>3 to 5 days</p>
           </Card>
+
           <Card>
             <div className="icon">
               <img src={teamwork} alt="" />
               <h3>Teamwork</h3>
             </div>
-            <p>Blah Blah Blaaaaaah</p>
+            <p>The best team</p>
           </Card>
+
           <Card>
             <div className="icon">
               <img src={diaphragm} alt="" />
               <h3>Diaphragm</h3>
             </div>
-            <p>Blah Blah Blaaaaaah</p>
+            <p>Best equipment</p>
           </Card>
+
           <Card>
             <div className="icon">
               <img src={money} alt="" />
               <h3>Affordable</h3>
             </div>
-            <p>Blah Blah Blaaaaaah</p>
+            <p>Low prices</p>
           </Card>
         </Cards>
       </Description>

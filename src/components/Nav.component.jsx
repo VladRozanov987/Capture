@@ -16,9 +16,6 @@ const Nav = () => {
         <li>
           <NavLink to="/work">Our Work</NavLink>
         </li>
-        <li>
-          <NavLink to="/contact">Contact Us</NavLink>
-        </li>
       </ul>
     </StyledNav>
   );
