@@ -6,8 +6,11 @@ export const Layout = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 10rem;
+  padding: 5rem;
   color: white;
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+  }
 `;
 
 export const Description = styled.div`
@@ -19,6 +22,11 @@ export const Description = styled.div`
   }
   .pinkSpan {
     color: #ff70ec;
+  }
+  @media screen and (max-width: 780px) {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 3rem;
   }
 `;
 

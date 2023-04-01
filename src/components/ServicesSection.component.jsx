@@ -61,22 +61,34 @@ const ServicesSection = () => {
 };
 
 const Services = styled(Layout)`
+  padding: 0 5rem;
   h2 {
     padding-bottom: 4rem;
   }
   p {
-    width: 70%;
     padding: 2rem 0 4rem 0;
+  }
+  @media screen and (max-width: 780px) {
+    padding: 0 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
   }
 `;
 
 const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 1150px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media screen and (max-width: 780px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 `;
 
 const Card = styled.div`
-  flex-basis: 15rem;
+  flex-basis: 5rem;
   .icon {
     display: flex;
     align-items: center;

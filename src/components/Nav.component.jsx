@@ -27,7 +27,7 @@ const StyledNav = styled.nav`
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 1rem 5rem;
   background: #282828;
   .logo {
     font-size: 1.8rem;
@@ -35,14 +35,17 @@ const StyledNav = styled.nav`
     font-weight: lighter;
   }
   ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-  }
-  li {
-    padding-left: 8rem;
-    position: relative;
-    color: #23d997;
+    li {
+      margin-left: 5rem;
+      @media screen and (max-width: 600px) {
+        margin-left: 2rem;
+        a {
+          font-size: 0.8rem;
+        }
+      }
+    }
   }
   a {
     color: white;

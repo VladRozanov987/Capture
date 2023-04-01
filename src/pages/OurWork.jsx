@@ -68,15 +68,18 @@ const OurWork = () => {
 const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
-  padding: 5rem 10rem;
+  padding: 3rem 5rem;
   color: white;
   h2 {
     padding: 1rem 0;
   }
+  @media screen and (max-width: 800px) {
+    padding: 1rem;
+  }
 `;
 
 const Movie = styled(motion.div)`
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   .line {
     height: 0.25rem;
     background: #23d997;

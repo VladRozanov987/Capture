@@ -61,6 +61,7 @@ const FaqSection = () => {
 };
 
 const Faq = styled(Layout)`
+  padding-top: 0;
   flex-direction: column;
   text-align: center;
   span {
